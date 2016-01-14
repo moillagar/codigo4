@@ -4,7 +4,7 @@
 
   <groupId>es.egc</groupId>
   <artifactId>47211848R</artifactId>
-  <version>4.1-SNAPSHOT</version>
+  <version>4.1</version>
   <packaging>jar</packaging>
 
   <name>ex4</name>
@@ -29,29 +29,27 @@
    <profile>
      <id> P1 </id>
 
- <build>
-    
+<build>
 	<plugins>
   		<!-- Make this jar executable -->
 		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-jar-plugin</artifactId>
+			<version>2.6</version>
 			<configuration>
-<!--Pluging configuration -->
+			<!--Pluging configuration -->
 			 <archive>
 				<manifest>
 					<!-- Jar file entry point -->
-					<mainClass>${project.artifactId}.App</mainClass>
-							<addClasspath>true</addClasspath>
-							<classpathPrefix> dependencias/</classpathPrefix>
+					<mainClass>${project.groupId}.App</mainClass>
 				</manifest>
 			  </archive>
+			  
+			  <finalName>myApp_47211848R</finalName> 
 			</configuration>
 		</plugin>
-		
 	</plugins>
-  
-     </build>
+  </build>
 
  </profile>
 </profiles>
